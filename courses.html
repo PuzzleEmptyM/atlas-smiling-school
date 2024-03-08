@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Coiny&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="1-styles.css">
+  <title>Courses</title>
+</head>
+<body>
+  <header>
+    <div class="header-background text-center align-items-center">
+      <nav class="navbar container-lg navbar-expand-sm navbar-dark bg-transparent pt-4 justify-content-sm-between">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a id="logo" class="navbar-brand mx-auto" href="homepage.html">
+          <img class="logo ml-5 l-sm-5" src="images/logo.png" alt="SmileLogo">
+        </a>
+        <div class="collapse navbar-collapse justify-content-center justify-content-sm-end" id="navbarNav">
+          <ul class="navbar-nav flex-column flex-sm-row text-center text-lg-left justify-content-sm-end container-sm pr-sm-5 ">
+            <li class="nav-item">
+              <a class="nav-link nav-site-map-active z-1" href="#">COURSES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-site-map z-1" href="pricing.html">PRICING</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-site-map z-1" href="#">LOGIN</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="mx-auto pb-3" style="width: 480px;">
+      <h2 class="nav-quote d-none d-sm-block">« Don’t cry because it’s over.
+        <span class="nav-quote-span">Smile</span> because it happened. »</h2>
+      </div>
+    </div>
+    <!-- SEARCH SECTION -->
+    <section class="py-5 d-flex justify-content-center" style="background-color: #C271FF;">
+      <nav id="search-nav" class="navbar bg-transparent">
+        <form id="form-container" class="form-inline" style="gap: 3rem;">
+          <div class="col-lg px-0">
+            <p id="form-title-text" class="d-flex">KEYWORDS</p>
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.89 13.8602C15.8967 13.9683 15.9333 14.0628 16 14.1439L19.9 18.075C19.9667 18.1425 20 18.2303 20 18.3384C20 18.4465 19.9667 18.5343 19.9 18.6018L18.62 19.8987C18.5533 19.9662 18.4667 20 18.36 20C18.2533 20 18.1667 19.9662 18.1 19.8987L17.74 19.5137L17.4175 19.2262L14.1856 15.9543C14.1269 15.9074 14.055 15.8815 13.97 15.8764C13.8567 15.8696 13.76 15.9 13.68 15.9676L13.315 16.2147C12.6983 16.6106 12.04 16.9267 11.34 17.1631C10.4733 17.4468 9.58667 17.5887 8.68 17.5887C7.10666 17.5887 5.64667 17.1901 4.3 16.3931C2.99333 15.6096 1.95334 14.5559 1.18 13.232C0.393329 11.8676 0 10.3884 0 8.79433C0 7.20026 0.393329 5.72105 1.18 4.35664C1.95334 3.03275 2.99333 1.97907 4.3 1.19554C5.64667 0.39851 7.10666 0 8.68 0C10.2533 0 11.7067 0.39851 13.04 1.19554C14.3467 1.97907 15.3867 3.03275 16.16 4.35664C16.9467 5.72105 17.34 7.20026 17.34 8.79433C17.34 10.5235 16.88 12.1108 15.96 13.5562C15.9067 13.6508 15.8833 13.7521 15.89 13.8602ZM12.7059 13.4533C13.0588 13.1531 13.3725 12.8203 13.6471 12.4548C14.0784 11.8936 14.4118 11.2769 14.6471 10.6047C14.8824 9.93248 15 9.23093 15 8.5C15 7.3253 14.7059 6.23545 14.1176 5.23042C13.5425 4.23845 12.7647 3.45532 11.7843 2.88102C10.7778 2.29367 9.68628 2 8.5098 2C7.33333 2 6.24184 2.29367 5.23529 2.88102C4.24183 3.45532 3.45752 4.23845 2.88235 5.23042C2.29411 6.23545 2 7.3253 2 8.5C2 9.6747 2.29411 10.7646 2.88235 11.7696C3.45752 12.7616 4.24183 13.5447 5.23529 14.119C6.24184 14.7063 7.33333 15 8.5098 15C9.29412 15 10.0457 14.8662 10.7647 14.5986C11.4837 14.3311 12.1307 13.9493 12.7059 13.4533Z" fill="white"/>
+              </svg> 
+            <input id="search-by-keyword" class="form-control-lg mr-sm-2 col-md-12 col-lg-12" type="search" placeholder="Search by keyword" aria-label="Search">
+          </div>
+            <div>
+            <p id="form-title-text" class="d-flex">TOPIC</p>
+            <div class="dropdown">
+              <button id="topic-sort-button" class="btn btn-secondary dropdown-toggle" style="width: 21.159rem; height: 3.1875rem;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Novice</span></button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Novice</a>
+                <a class="dropdown-item" href="#">Intermediate</a>
+                <a class="dropdown-item" href="#">Expert</a>
+              </div>
+            </div>
+            </div>
+            <div>
+              <p id="form-title-text" class="d-flex">SORT BY</p>
+              <div class="dropdown">
+                <button id="topic-sort-button" class="btn btn-secondary dropdown-toggle" style="width: 21.159rem; height: 3.1875rem;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Most Popular</span></button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Most Popular</a>
+                  <a class="dropdown-item" href="#">Most Recent</a>
+                  <a class="dropdown-item" href="#">Most Viewd</a>
+                </div>
+              </div>
+            </div>
+        </form>
+      </nav>
+    </section>
+    <!-- COURSES VIDEOS -->
+    <section id="video_carousel" class="container-fluid text-center pt-5">
+      <h1><span class="popular">Latest</span> tutorials</h1>
+      <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="false">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="row">
+
+              <div class="col mb-4">
+                <div class="card text-left mx-auto" style="width: 255px;">
+                  <img class="card-img-top" src="images/natural.png" alt="first video">
+                  <img class="playbutton" src="images/play_btn.svg" alt="play button">
+                  <div class="card-body">
+                  <p class="card-title mb-0">Diagonal smile</p>
+                  <p class="card-text">Lorem ipsum dolor sit annet, consect adpiscing elit, sed do eiusmod.</p>
+                    <div class="ratings">
+                      <div id="rater" class="d-flex mb-3">
+                        <img class="phillip" src="images/Philip.png">
+                        <div class="rater"><p>Phillip Massey</p></div>
+                      </div>
+                      <div class="d-flex h-15 justify-content-between align-items-center">
+                        <img src="images/rating_1.svg">
+                        <img src="images/rating_2.svg">
+                        <img src="images/rating_3.svg">
+                        <img src="images/rating_4.svg">
+                        <img src="images/rating_5.svg" class="mr-5">
+                        <div class="video-time mt-3"><p>8 min</p></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col mb-4">
+                <div class="card text-left mx-auto" style="width: 255px;">
+                  <img class="card-img-top" src="images/happy.png" alt="second video">
+                  <img class="playbutton" src="images/play_btn.svg" alt="play button">
+                  <div class="card-body">
+                  <p class="card-title mb-0">Sad smile</p>
+                  <p class="card-text">Lorem ipsum dolor sit annet, consect adpiscing elit, sed do eiusmod.</p>
+                    <div class="ratings">
+                      <div id="rater" class="d-flex mb-3">
+                        <img class="phillip" src="images/Philip.png">
+                        <div class="rater"><p>Phillip Massey</p></div>
+                      </div>
+                      <div class="d-flex h-15 justify-content-between align-items-center">
+                        <img src="images/rating_1.svg">
+                        <img src="images/rating_2.svg">
+                        <img src="images/rating_3.svg">
+                        <img src="images/rating_4.svg">
+                        <img src="images/rating_5.svg" class="mr-5">
+                        <div class="video-time mt-3"><p>8 min</p></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col mb-4">
+                <div class="card text-left mx-auto" style="width: 255px;">
+                  <img class="card-img-top" src="images/sad.png" alt="second video">
+                  <img class="playbutton" src="images/play_btn.svg" alt="play button">
+                  <div class="card-body">
+                  <p class="card-title mb-0">Sad smile</p>
+                  <p class="card-text">Lorem ipsum dolor sit annet, consect adpiscing elit, sed do eiusmod.</p>
+                    <div class="ratings">
+                      <div id="rater" class="d-flex mb-3">
+                        <img class="phillip" src="images/Philip.png">
+                        <div class="rater"><p>Phillip Massey</p></div>
+                      </div>
+                      <div class="d-flex h-15 justify-content-between align-items-center">
+                        <img src="images/rating_1.svg">
+                        <img src="images/rating_2.svg">
+                        <img src="images/rating_3.svg">
+                        <img src="images/rating_4.svg">
+                        <img src="images/rating_5.svg" class="mr-5">
+                        <div class="video-time mt-3"><p>8 min</p></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col mb-4">
+                <div class="card text-left mx-auto" style="width: 255px;">
+                  <img class="card-img-top" src="images/diagonal.png" alt="second video">
+                  <img class="playbutton" src="images/play_btn.svg" alt="play button">
+                  <div class="card-body">
+                  <p class="card-title mb-0">Sad smile</p>
+                  <p class="card-text">Lorem ipsum dolor sit annet, consect adpiscing elit, sed do eiusmod.</p>
+                    <div class="ratings">
+                      <div id="rater" class="d-flex mb-3">
+                        <img class="phillip" src="images/Philip.png">
+                        <div class="rater"><p>Phillip Massey</p></div>
+                      </div>
+                      <div class="d-flex h-15 justify-content-between align-items-center">
+                        <img src="images/rating_1.svg">
+                        <img src="images/rating_2.svg">
+                        <img src="images/rating_3.svg">
+                        <img src="images/rating_4.svg">
+                        <img src="images/rating_5.svg" class="mr-5">
+                        <div class="video-time mt-3"><p>8 min</p></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row">
+
+              <div class="col mb-4">
+                <div class="card text-left mx-auto" style="width: 255px;">
+                  <img class="card-img-top" src="images/natural.png" alt="first video">
+                  <img class="playbutton" src="images/play_btn.svg" alt="play button">
+                  <div class="card-body">
+                  <p class="card-title mb-0">Diagonal smile</p>
+                  <p class="card-text">Lorem ipsum dolor sit annet, consect adpiscing elit, sed do eiusmod.</p>
+                    <div class="ratings">
+                      <div id="rater" class="d-flex mb-3">
+                        <img class="phillip" src="images/Philip.png">
+                        <div class="rater"><p>Phillip Massey</p></div>
+                      </div>
+                      <div class="d-flex h-15 justify-content-between align-items-center">
+                        <img src="images/rating_1.svg">
+                        <img src="images/rating_2.svg">
+                        <img src="images/rating_3.svg">
+                        <img src="images/rating_4.svg">
+                        <img src="images/rating_5.svg" class="mr-5">
+                        <div class="video-time mt-3"><p>8 min</p></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col mb-4">
+                <div class="card text-left mx-auto" style="width: 255px;">
+                  <img class="card-img-top" src="images/happy.png" alt="second video">
+                  <img class="playbutton" src="images/play_btn.svg" alt="play button">
+                  <div class="card-body">
+                  <p class="card-title mb-0">Sad smile</p>
+                  <p class="card-text">Lorem ipsum dolor sit annet, consect adpiscing elit, sed do eiusmod.</p>
+                    <div class="ratings">
+                      <div id="rater" class="d-flex mb-3">
+                        <img class="phillip" src="images/Philip.png">
+                        <div class="rater"><p>Phillip Massey</p></div>
+                      </div>
+                      <div class="d-flex h-15 justify-content-between align-items-center">
+                        <img src="images/rating_1.svg">
+                        <img src="images/rating_2.svg">
+                        <img src="images/rating_3.svg">
+                        <img src="images/rating_4.svg">
+                        <img src="images/rating_5.svg" class="mr-5">
+                        <div class="video-time mt-3"><p>8 min</p></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col mb-4">
+                <div class="card text-left mx-auto" style="width: 255px;">
+                  <img class="card-img-top" src="images/sad.png" alt="second video">
+                  <img class="playbutton" src="images/play_btn.svg" alt="play button">
+                  <div class="card-body">
+                  <p class="card-title mb-0">Sad smile</p>
+                  <p class="card-text">Lorem ipsum dolor sit annet, consect adpiscing elit, sed do eiusmod.</p>
+                    <div class="ratings">
+                      <div id="rater" class="d-flex mb-3">
+                        <img class="phillip" src="images/Philip.png">
+                        <div class="rater"><p>Phillip Massey</p></div>
+                      </div>
+                      <div class="d-flex h-15 justify-content-between align-items-center">
+                        <img src="images/rating_1.svg">
+                        <img src="images/rating_2.svg">
+                        <img src="images/rating_3.svg">
+                        <img src="images/rating_4.svg">
+                        <img src="images/rating_5.svg" class="mr-5">
+                        <div class="video-time mt-3"><p>8 min</p></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col mb-4">
+                <div class="card text-left mx-auto" style="width: 255px;">
+                  <img class="card-img-top" src="images/diagonal.png" alt="second video">
+                  <img class="playbutton" src="images/play_btn.svg" alt="play button">
+                  <div class="card-body">
+                  <p class="card-title mb-0">Sad smile</p>
+                  <p class="card-text">Lorem ipsum dolor sit annet, consect adpiscing elit, sed do eiusmod.</p>
+                    <div class="ratings">
+                      <div id="rater" class="d-flex mb-3">
+                        <img class="phillip" src="images/Philip.png">
+                        <div class="rater"><p>Phillip Massey</p></div>
+                      </div>
+                      <div class="d-flex h-15 justify-content-between align-items-center">
+                        <img src="images/rating_1.svg">
+                        <img src="images/rating_2.svg">
+                        <img src="images/rating_3.svg">
+                        <img src="images/rating_4.svg">
+                        <img src="images/rating_5.svg" class="mr-5">
+                        <div class="video-time mt-3"><p>8 min</p></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a class="carousel-control-prev" href="#video_carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true">
+              <i class="fas fa-chevron-left"></i>
+            </span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#video_carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true">
+              <i class="fas fa-chevron-right"></i>
+            </span>
+            <span class="sr-only">Next</span>
+          </a>
+
+      </div>
+  </section>
+  </header>
+    <!-- FOOTER -->
+    <footer class="py-5 mt-5 text-center" style="background-color: #071629;">
+      <div class="container-fluid text-center align-items-center text-light d-flex justify-content-between row" style="gap: 2rem; padding-left: 3rem;">
+        <div class="col-md-3 col-sm-3">
+          <img src="images/logo.png">
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <img src="images/social_Facebook.svg">
+          <img src="images/social_Twitter.svg">
+          <img src="images/social_Instagram.svg">
+        </div>
+      </div>
+      <p class="text-white-50 mt-5" style="font-size: 12px; ">©smileschool 2024</p>
+    </footer>
+  
+</body>
+</html>
