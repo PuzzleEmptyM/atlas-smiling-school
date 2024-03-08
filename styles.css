@@ -1,178 +1,157 @@
-/* School Page */
+* { 
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
-  background: #FFF;
-  margin: 0px;
+  height: 100%;
+  width: 100%;
 }
 
-.wrapper {
-  width: 100%; /* Full width of the viewport */
-  margin: 0 auto; /* Auto margin on both sides to center the content */
-  box-sizing: border-box; /* Include padding and borders in width */
+nav, #navbarNav, nav button {
+  z-index: 15 !important;
 }
 
-/*Header */
-header {
-  position: absolute;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 40px;
-}
-#header_cont {
-  width: 1103.408px;
-  height: 29.461px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-#logo {
-  width: 167.016px;
-  height: 29.461px;
-  flex-shrink: 0;
-}
-#menu {
-  display: inline-flex;
-  height: 15px;
-  justify-content: center;
-  align-items: center;
-  gap: 52px;
-  flex-shrink: 0;
-}
-#menu a {
-  color: #FFF;
+.nav-item a {
+  color: white !important; 
   font-family: "Source Sans Pro";
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   text-decoration: none;
 }
 
-.background-layer {
+.nav-item a:hover {
+  opacity: 0.9;
+}
+
+#banner-section {
+  background: url(images/BannerBackgroundWGradient.png) center/cover no-repeat; 
+  width: 1440;
+  height: 1080px; 
+  flex-shrink: 0;
+}
+
+#schooling-container {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background: url(images/BannerBackgroundWGradient.png) center/cover no-repeat;
-  z-index: -1; /* Set z-index lower than content */
+  flex-direction: column;
+  margin-bottom: 5rem;
 }
 
-#main-part {
-  position: relative;
-  width: 100%;
-  height: 1140px;
-  z-index: 1; /* Higher z-index for content */
-}
-
-#main-part::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: radial-gradient(ellipse at center, transparent, rgba(0, 0, 0, 0.5));
-  pointer-events: none; /* Ensure it doesn't interfere with interactions */
-}
-
-#get-schooled {
-  width: 100%;
+#schooling-big-text {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#get-schooled h1 {
+@media screen and (min-width: 700px) {
+  #schooling-big-text h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: "Source Sans Pro";
+    font-size: 7.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 12rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #schooling-big-text h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: "Source Sans Pro";
+    font-size: 3.7rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 12rem;
+  }
+}
+
+#schooling-big-text p { 
   color: #FFF;
-  text-align: center;
   font-family: "Source Sans Pro";
-  font-size: 120px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-top: 250px;
-  margin-bottom: 0px;
+  align-content: center;
+  word-spacing: 55px;
 }
 
-#get-schooled p {
+#register-button {
+  border-radius: 1.3rem;
+  border: none;
+  background: #C271FF;
   color: #FFF;
   text-align: center;
   font-family: "Source Sans Pro";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  word-spacing: 50px;
-}
-
-#get-schooled button {
-  margin-top: 40px;
-  width: 162px;
-  height: 44px;
-  flex-shrink: 0;
-  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.50);
-  background-color: #C271FF;
-  border: #C271FF; 
-  border-radius: 22px;
-  color: #FFF;
-  text-align: center;
-  font-family: "Source Sans Pro";
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  /*margin-left: 643.08px;*/
+  width: 10.125rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  margin-top: 3rem;
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.50); 
 }
 
-/* Learn from the pros */
-#pros {
-  max-width: 1009px;
-  width: 100%;
-  height: 237px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  z-index: 0;
-}
-#pros h2 {
+#the-pros {
+  justify-content: center;
   text-align: center;
+  margin-top: 4rem;
+  flex-direction: column;
+  width: 100%;
+}
+
+#the-pros span {
+  color: #C271FF;
+  text-align: center;
+  font-family: "Source Sans Pro";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal; 
+}
+
+#the-pros h2 {
   color: #FFF;
   font-family: "Source Sans Pro";
   font-size: 32px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
-  margin-bottom: 87px;
 }
 
-.purple {
-  color: #C271FF;
-}
-#pro_list {
-  display: flex;
-  width: 1009px;
-  height: 237px;
-  flex-shrink: 0;
-  justify-content: space-around;
-}
-.pro {
-  width: 150px;
-  height: 237px;
-  flex-shrink: 0;
-  flex-direction: column;
-}
 .pro img {
-  width: 150px;
-  height: 150px;
+  width: 9.375rem;
+  height: 9.375rem;
   flex-shrink: 0;
   border-radius: 50%;
+  z-index: 2;
 }
+
+#pros-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 70px;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10rem;
+}
+
+.pro {
+  width: 180px;
+  height: 237px;
+}
+
 .pro h3 {
   color: #FFF;
   text-align: center;
@@ -180,9 +159,9 @@ header {
   font-size: 18px;
   font-style: normal;
   font-weight: 900;
-  line-height: 27px; /* 150% */
-  width: 150px;
+  line-height: 27px;
 }
+
 .pro p {
   color: #FFF;
   text-align: center;
@@ -190,80 +169,78 @@ header {
   font-size: 16px;
   font-style: italic;
   font-weight: 400;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
 }
-/* Testimonials */
-#testimony {
-  width: 100%;
-  height: 392px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+
+/* BANNER SECTION */
+
+#Carousel {
   background-color: #C271FF;
 }
-#testimonial-block {
-  width: 943px;
-  height: 160px;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: space-between;
+
+.carousel-item {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  align-items: center;
+  width: 100%;
 }
-#testimonial-block img {
-  width: 160px;
-  height: 160px;
-  flex-shrink: 0;
+
+.quote_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.quote_img img {
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
 }
-#test-quote {
-  width: 730px;
-  height: 158px;
-  flex-shrink: 0;
-  padding: 0;
+
+.quote_text_container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 50px;
 }
-#test-quote blockquote {
-  margin: 0;
-  width: 730px;
+
+.quote_text_container blockquote {
   color: #FFF;
   font-family: "Source Sans Pro";
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
-  line-height: 33.6px; /* 152.727% */
+  line-height: 33.6px;
 }
-.bold {
+
+.quote_text_container cite {
   color: #FFF;
   font-family: "Source Sans Pro";
   font-size: 22px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 33.6px;
 }
-.italic {
+
+.quote_text_container p {
   color: #FFF;
   font-family: "Source Sans Pro";
   font-size: 22px;
   font-style: italic;
   font-weight: 400;
-  line-height: 33.6px; /* 152.727% */
+  line-height: 33.6px;
 }
-/* Video tutorials */
-#tutorial-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 550px;
+
+/* VIDEO CAROUSEL */
+
+#video_carousel {
+  background-color: #FFF;
 }
-#tutorials {
-  width: 1228px;
-  height: 450px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-#tutorials h1 {
+
+#video_carousel h1 {
   color: #071629;
   text-align: center;
   font-family: "Source Sans Pro";
@@ -271,153 +248,67 @@ header {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
-  margin-top: 7px;
 }
-#tutorials .purple {
+
+#video_carousel span {
   color: #C271FF;
   font-family: "Source Sans Pro";
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
-}
-#group-tutorial {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-.tutorial {
-  width: 255px;
-  height: 400px;
-  flex-shrink: 0;
-  flex-direction: column;
-  border-radius: 5px;
-  background: #FFF;
-  box-shadow: 0px 2px 4px 0px rgba(7, 22, 41, 0.18);
-}
-.tutorial .video {
-  position: relative;
-  width: 255px;
-  height: 154px;
-  flex-shrink: 0;
-  border-radius: 5px 5px 0px 0px;
-  background: #D8D8D8;
+  line-height: normal; 
 }
 
-.tutorial:nth-child(1) .play_btn {
-  position: relative;
-  top: -30%;
-  left: 35%;
-  width: 64px;
-  height: 64px;
-  flex-shrink: 0;
-}
-.tutorial:nth-child(2) .play_btn {
-  position: relative;
-  top: -30%;
-  left: 35%;
-  width: 64px;
-  height: 64px;
-  flex-shrink: 0; 
-}
-.tutorial:nth-child(3) .play_btn {
-  position: relative;
-  top: -30%;
-  left: 35%;
-  width: 64px;
-  height: 64px;
-  flex-shrink: 0; 
-}
-.tutorial:nth-child(4) .play_btn {
-  position: relative;
-  top: -30%;
-  left: 35%;
-  width: 64px;
-  height: 64px;
-  flex-shrink: 0; 
+.phillip {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
-.tutorial h2 {
+.playbutton {
+  position: absolute;
+  padding-top: 3rem;
+  padding-left: 6rem;
+}
+
+#card_title {
   color: #071629;
   font-family: "Source Sans Pro";
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-top: 0px;
-  padding: 10px;
-  margin-bottom: 0px;
 }
-.tutorial p {
+
+#card_p {
   color: rgba(7, 22, 41, 0.50);
   font-family: "Source Sans Pro";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  padding-left: 10px;
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
-.rating {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding-left: 10px;
-}
-.rating-pers {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 15px;
-}
-.rating-pers img {
-  width: 30px;
-  height: 30px;
-  flex-shrink: 0;
-  border-radius: 50%;
-}
-.rating h3 {
+
+.rater {
   color: #C271FF;
   font-family: "Source Sans Pro";
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
-  line-height: 27px; /* 192.857% */
+  line-height: 27px;
+  margin-left: 1rem;
 }
-.stars {
-  display: flex;
-  justify-content: flex-start;
-  gap: 70px;
-  align-items: center;
+
+#rater {
+  margin-top: -1rem;
+  position: absolute;
 }
-.stars p {
-  color: #C271FF;
-  text-align: right;
-  font-family: "Source Sans Pro";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 27px; /* 192.857% */
+
+.ratings {
+  margin-top: 3rem;
 }
-.star-group {
-  width: 107px;
-  height: 15px;
-  flex-shrink: 0;
-}
-/* Free membership */
-#membership {
-  width: 100%;
-  height: 502px;
-  background-color: #071629;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-#membership h1 {
-  margin-top: 70px;
+
+.free_membership {
   color: #FFF;
   font-family: "Source Sans Pro";
   font-size: 32px;
@@ -425,7 +316,8 @@ header {
   font-weight: 300;
   line-height: normal;
 }
-#membership .purple {
+
+.free_membership span {
   color: #C271FF;
   text-align: center;
   font-family: "Source Sans Pro";
@@ -434,165 +326,41 @@ header {
   font-weight: 700;
   line-height: normal;
 }
-#membership div {
-  display: flex;
-}
-.smile {
-  width: 257px;
-  height: 153px;
-  flex-shrink: 0;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.smile img {
-  width: 43.666px;
-  height: 35.353px;
-  flex-shrink: 0;
-}
-.smile h2 {
+
+.membership-info h5 {
   color: #FFF;
   text-align: center;
   font-family: "Source Sans Pro";
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
-  line-height: 26px; /* 144.444% */
-  width: 256px;
+  line-height: 26px;
 }
-.smile p {
+
+.membership-info p {
   color: #FFF;
   text-align: center;
   font-family: "Source Sans Pro";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 26px; /* 185.714% */
-  width: 212px;
+  line-height: 26px;
 }
-#membership button {
-  width: 162px;
-  height: 44px;
-  flex-shrink: 0;
-  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.50);
-  background-color: #C271FF;
-  border: #C271FF;
-  border-radius: 22px;
+
+.membership-flex-container button {
+  border-radius: 1.3rem;
+  border: none;
+  background: #C271FF;
   color: #FFF;
   text-align: center;
   font-family: "Source Sans Pro";
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  margin-bottom: 52px;
-}
-/* FAQ */
-#FAQ {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 850px;
-}
-#faq-cont {
-  width: 920px;
-  height: 100%;
+  width: 10.125rem;
+  height: 2.75rem;
   flex-shrink: 0;
-}
-#FAQ h1 {
-  margin-top: 67px;
-  color: #071629;
-  text-align: center;
-  font-family: "Source Sans Pro";
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-}
-.qa_container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 50px;
-}
-.qa {
-  display: flex;
-  justify-content: space-between;
-}
-.qa_block {
-  display: flex;
-  width: 350px;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0px;
-}
-.qa_block h2 {
-  color: #071629;
-  font-family: "Source Sans Pro";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.qa_block p {
-  color: rgba(7, 22, 41, 0.50);
-  font-family: "Source Sans Pro";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 171.429% */
-  width: 350px;
-}
-/* Footer */
-footer {
-  width: 100%;
-  height: 249px;
-  flex-shrink: 0;
-  background-color: #071629;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-#footer_logo {
-  display: inline-flex;
-  padding: 0.023px 0px 0.516px 0.592px;
-  justify-content: center;
-  align-items: center;
-  gap: 18.019px;
-}
-#social {
-  width: 130px;
-  height: 30px;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: space-between;
-}
-#socail a {
-  width: 25px;
-  height: 25px;
-}
-#footer_cont {
-  height: 50%;
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-#footer_cont div {
-  display: flex;
-  justify-content: space-between;
-}
-#footer_cont p {
-  color: #FFF;
-  font-family: "Source Sans Pro";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  opacity: 0.3517;
-  text-align: center;
+  margin-top: 3rem;
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.50); 
 }
